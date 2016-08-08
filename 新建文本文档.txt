@@ -1,0 +1,14 @@
+0801  背景图，菜单按钮
+0802  编辑json文件，JQuery读取显示json文件
+0803  格式化显示json文件
+0804  html 注释  <!--   -->
+      javascript 单行注释  //
+                 多行注释  /*    */
+      
+      jquery 设置字体颜色    《！-- 搜索关键词 jquery 字体颜色    --》
+
+      设置页面背景色  <body bgcolor="#f0ffff"  > 
+
+
+      jquery json文件查询 ， jquery json 条件查询
+      http://zhidao.baidu.com/link?url=ZLF8hEeRdvW4kw0Y8s9JlUsBpmsaFQ89RrvD7vGrA-RCPEPLv7bLN4gHtPIj1c1JIZ-tws3K1WwFEUfrH4T6dJuwxEC2hjf6wgqGmcrCw0u

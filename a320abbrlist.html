@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+<!DOCTYPE html>
+<html>
+
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--适用手机屏幕-->    <meta name="viewport" content="initial-scale=0.6, user-scalable=1, minimal-ui">
+
+    <title>A320缩略语列表</title>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+    <style type="text/css">
+        #divframe{ border:1px solid #999;  margin:0 left; }
+
+    </style>
+
+
+
+    <script type="text/javascript">
+        function ShowA320AbbrList(){
+           $.getJSON("a320abbr.json",function(data){
+              var $jsontip = $("#jsonTip");
+              var strHtml = "";//存储数据的变量
+              $jsontip.empty();//清空内容
+              $.each(data,function(infoIndex,info){
+                   strHtml += " <strong><font color='#228b22'>"  + info["e_abbr"]+  ": "+ "</font></strong>" +info["e_fullname"]+"</br>";   // color 颜色是   单引号
+
+                  strHtml +=  info["c_fullname"];
+                  strHtml += "<hr>";
+
+               });
+              $jsontip.html(strHtml);//显示处理后的数据
+
+           })
+
+            document.getElementById("jsonTip").getElementsByTagName("h6")[0].style.color = 'green';
+        }
+
+     //  window.onload = ShowA320AbbrList;  //也可以在这里调用，页面加载后执行
+
+    </script>
+
+</head>
+
+<body bgcolor="#f0ffff" onload="ShowA320AbbrList()">
+
+<div id="divframe">
+
+    <div id="jsonTip">
+    </div>
+
+
+</div>
+</body>
+</html>
+
